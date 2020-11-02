@@ -155,7 +155,7 @@ int main() {
 
             //std::cout << Gam_p_j << std::endl;
             //j+1/2のフラックスの計算
-            e_mean.row(j).transpose() = 0.5 * (A_p_j * q_old.row(j).transpose() + A_m_jp1 * q_old.row(j+1).transpose());
+            e_mean.row(j).transpose() = A_p_j * q_old.row(j).transpose() + A_m_jp1 * q_old.row(j+1).transpose();
         }
         /*if (i==0){
             std::cout << e_mean << std::endl;
